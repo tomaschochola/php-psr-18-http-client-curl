@@ -1,0 +1,8 @@
+includes:
+  - ./vendor/tomaschochola/php-tooling-phpstan-config/src/php_85_library.neon
+
+parameters:
+  paths:
+    - ./.php-cs-fixer.php
+    - ./src
+    - ./tests
