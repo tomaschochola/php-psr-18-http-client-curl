@@ -64,7 +64,7 @@ readonly class CurlHttpClient implements ClientInterface
         $this->responseFactory = $responseFactory;
     }
 
-    public static function provide(ContainerInterface $container): ClientInterface
+    public static function unload(ContainerInterface $container): self
     {
         $responseFactory = $container->get(ResponseFactoryInterface::class);
 
