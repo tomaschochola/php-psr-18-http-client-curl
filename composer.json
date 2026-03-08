@@ -56,11 +56,6 @@
       "no-api": true,
       "type": "git",
       "url": "https://github.com/tomaschochola/php-tooling-php-cs-fixer-config.git"
-    },
-    {
-      "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/php-psr-11-container.git"
     }
   ],
   "require": {
@@ -70,8 +65,7 @@
     "psr/container": "^2.0",
     "psr/http-client": "^1.0",
     "psr/http-factory": "^1.1",
-    "psr/http-message": "^2.0",
-    "tomaschochola/php-psr-11-container": "^1.0@dev"
+    "psr/http-message": "^2.0"
   },
   "require-dev": {
     "ext-intl": "*",
