@@ -15,6 +15,7 @@ declare(strict_types=1);
 
 namespace TomasChochola\Psr\Http\Client;
 
+use NoDiscard;
 use Override;
 use Psr\Http\Client\NetworkExceptionInterface;
 use Psr\Http\Message\RequestInterface;
@@ -26,7 +27,7 @@ use Throwable;
  */
 class NetworkException extends RuntimeException implements NetworkExceptionInterface
 {
-    protected readonly RequestInterface $request;
+    private readonly RequestInterface $request;
 
     public function __construct(RequestInterface $request, string $message = '', int $code = 0, Throwable|null $previous = null)
     {
@@ -35,6 +36,7 @@ class NetworkException extends RuntimeException implements NetworkExceptionInter
         $this->request = $request;
     }
 
+    #[NoDiscard]
     #[Override]
     public function getRequest(): RequestInterface
     {

@@ -15,13 +15,13 @@ use Traversable;
  *
  * @implements IteratorAggregate<mixed, mixed>
  */
-readonly class HttpClientProvider implements IteratorAggregate
+readonly class HttpClientManifest implements IteratorAggregate
 {
     #[NoDiscard]
     #[Override]
     public function getIterator(): Traversable
     {
-        yield CurlHttpClient::class => [CurlHttpClient::class, 'unload'];
-        yield ClientInterface::class => [CurlHttpClient::class, 'unload'];
+        yield CurlHttpClient::class => [CurlHttpClientAssembler::class, 'assemble'];
+        yield ClientInterface::class => [CurlHttpClientAssembler::class, 'assemble'];
     }
 }
