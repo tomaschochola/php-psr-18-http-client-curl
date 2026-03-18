@@ -17,6 +17,7 @@ namespace TomasChochola\Psr\Http\Client;
 
 use NoDiscard;
 use Override;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
@@ -57,6 +58,16 @@ use const CURL_HTTP_VERSION_NONE;
  */
 readonly class CurlHttpClient implements ClientInterface
 {
+    #[NoDiscard]
+    public static function inject(ContainerInterface $container): self
+    {
+        $responseFactory = $container->get(ResponseFactoryInterface::class);
+
+        assert($responseFactory instanceof ResponseFactoryInterface);
+
+        return new self($responseFactory);
+    }
+
     private readonly ResponseFactoryInterface $responseFactory;
 
     public function __construct(ResponseFactoryInterface $responseFactory)
@@ -82,81 +93,85 @@ readonly class CurlHttpClient implements ClientInterface
             throw new NetworkException($request);
         }
 
-        $response = $this->responseFactory->createResponse();
-        $output = $response->getBody();
-        $input = $request->getBody();
-        $heads = [];
+        try {
+            $response = $this->responseFactory->createResponse();
+            $output = $response->getBody();
+            $input = $request->getBody();
+            $heads = [];
 
-        if ($input->isSeekable()) {
-            $input->rewind();
-        }
+            if ($input->isSeekable()) {
+                $input->rewind();
+            }
 
-        $method = $request->getMethod();
+            $method = $request->getMethod();
 
-        $ok = curl_setopt_array($curl, [
-            CURLOPT_CUSTOMREQUEST => $method,
-            CURLOPT_DEFAULT_PROTOCOL => 'https',
-            CURLOPT_URL => (string) $request->getUri(),
-            CURLOPT_REQUEST_TARGET => $request->getRequestTarget(),
-            CURLOPT_HTTP_VERSION => match ($request->getProtocolVersion()) {
-                '1', '1.0' => CURL_HTTP_VERSION_1_0,
-                '1.1' => CURL_HTTP_VERSION_1_1,
-                '2', '2.0' => CURL_HTTP_VERSION_2,
-                '3', '3.0' => CURL_HTTP_VERSION_3,
-                default => CURL_HTTP_VERSION_NONE,
-            },
-            CURLOPT_UPLOAD => !in_array($method, ['GET', 'HEAD', 'OPTIONS', 'TRACE'], true),
-            CURLOPT_READFUNCTION => static fn(mixed $ch, mixed $fd, int $length): string => $input->read($length),
-            CURLOPT_HTTPHEADER => $headers,
-            CURLOPT_WRITEFUNCTION => static fn(mixed $ch, string $data): int => $output->write($data),
-            CURLOPT_HEADERFUNCTION => static function (mixed $ch, string $data) use (&$heads): int {
-                $version = null;
-                $status = null;
-                $reason = null;
-                $scanned = sscanf($data, " HTTP/ %f %d %[^\r\n]", $version, $status, $reason);
+            $ok = curl_setopt_array($curl, [
+                CURLOPT_CUSTOMREQUEST => $method,
+                CURLOPT_DEFAULT_PROTOCOL => 'https',
+                CURLOPT_URL => (string) $request->getUri(),
+                CURLOPT_REQUEST_TARGET => $request->getRequestTarget(),
+                CURLOPT_HTTP_VERSION => match ($request->getProtocolVersion()) {
+                    '1', '1.0' => CURL_HTTP_VERSION_1_0,
+                    '1.1' => CURL_HTTP_VERSION_1_1,
+                    '2', '2.0' => CURL_HTTP_VERSION_2,
+                    '3', '3.0' => CURL_HTTP_VERSION_3,
+                    default => CURL_HTTP_VERSION_NONE,
+                },
+                CURLOPT_UPLOAD => !in_array($method, ['GET', 'HEAD', 'OPTIONS', 'TRACE'], true),
+                CURLOPT_READFUNCTION => static fn(mixed $ch, mixed $fd, int $length): string => $input->read($length),
+                CURLOPT_HTTPHEADER => $headers,
+                CURLOPT_WRITEFUNCTION => static fn(mixed $ch, string $data): int => $output->write($data),
+                CURLOPT_HEADERFUNCTION => static function (mixed $ch, string $data) use (&$heads): int {
+                    $version = null;
+                    $status = null;
+                    $reason = null;
+                    $scanned = sscanf($data, " HTTP/ %f %d %[^\r\n]", $version, $status, $reason);
 
-                if ($scanned === 2 || $scanned === 3) {
-                    $heads = [];
+                    if ($scanned === 2 || $scanned === 3) {
+                        $heads = [];
+
+                        return mb_strlen($data, '8bit');
+                    }
+
+                    $key = null;
+                    $val = null;
+                    $scanned = sscanf($data, " %[^:] : %[^\r\n]", $key, $val);
+
+                    if ($scanned === 2 && is_string($key) && is_string($val)) {
+                        $heads[$key][] = $val;
+                    }
 
                     return mb_strlen($data, '8bit');
-                }
+                },
+            ]);
 
-                $key = null;
-                $val = null;
-                $scanned = sscanf($data, " %[^:] : %[^\r\n]", $key, $val);
-
-                if ($scanned === 2 && is_string($key) && is_string($val)) {
-                    $heads[$key][] = $val;
-                }
-
-                return mb_strlen($data, '8bit');
-            },
-        ]);
-
-        if ($ok !== true) {
-            throw new NetworkException($request, curl_error($curl), curl_errno($curl));
-        }
-
-        $ok = curl_exec($curl);
-
-        if ($ok !== true) {
-            throw new NetworkException($request, curl_error($curl), curl_errno($curl));
-        }
-
-        $status = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
-
-        if (!is_int($status)) {
-            throw new NetworkException($request, curl_error($curl), curl_errno($curl));
-        }
-
-        $response = $response->withStatus($status);
-
-        foreach ($heads as $k => $v) {
-            foreach ($v as $vv) {
-                $response = $response->withAddedHeader($k, $vv);
+            if ($ok !== true) {
+                throw new NetworkException($request, curl_error($curl), curl_errno($curl));
             }
-        }
 
-        return $response;
+            $ok = curl_exec($curl);
+
+            if ($ok !== true) {
+                throw new NetworkException($request, curl_error($curl), curl_errno($curl));
+            }
+
+            $status = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
+
+            if (!is_int($status)) {
+                throw new NetworkException($request, curl_error($curl), curl_errno($curl));
+            }
+
+            $response = $response->withStatus($status);
+
+            foreach ($heads as $k => $v) {
+                foreach ($v as $vv) {
+                    $response = $response->withAddedHeader($k, $vv);
+                }
+            }
+
+            return $response;
+        } finally {
+            curl_close($curl);
+        }
     }
 }
