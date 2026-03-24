@@ -17,7 +17,6 @@ namespace TomasChochola\Psr\Http\Client;
 
 use NoDiscard;
 use Override;
-use Psr\Container\ContainerInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
@@ -56,23 +55,13 @@ use const CURL_HTTP_VERSION_NONE;
 /**
  * @no-named-arguments
  */
-readonly class CurlHttpClient implements ClientInterface
+readonly class CurlClient implements ClientInterface
 {
     private readonly ResponseFactoryInterface $responseFactory;
 
     public function __construct(ResponseFactoryInterface $responseFactory)
     {
         $this->responseFactory = $responseFactory;
-    }
-
-    #[NoDiscard]
-    public static function inject(ContainerInterface $container): self
-    {
-        $responseFactory = $container->get(ResponseFactoryInterface::class);
-
-        assert($responseFactory instanceof ResponseFactoryInterface);
-
-        return new self($responseFactory);
     }
 
     #[NoDiscard]
