@@ -22,7 +22,6 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 
-use function assert;
 use function curl_errno;
 use function curl_error;
 use function curl_exec;
