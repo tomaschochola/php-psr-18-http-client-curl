@@ -6,7 +6,7 @@
   },
   "bugs": {
     "email": "tomaschochola@tomaschochola.cz",
-    "url": "https://github.com/tomaschochola/php-psr-18-http-client/issues"
+    "url": "https://github.com/tomaschochola/php-psr-18-http-client-curl/issues"
   },
   "contributors": [
     {
@@ -15,7 +15,7 @@
       "url": "https://github.com/tomaschochola"
     }
   ],
-  "description": "@tomaschochola/php-psr-18-http-client",
+  "description": "@tomaschochola/php-psr-18-http-client-curl",
   "devDependencies": {
     "@tomaschochola/ts-tooling-eslint-config": "github:tomaschochola/ts-tooling-eslint-config#1.x",
     "@tomaschochola/ts-tooling-prettier-config": "github:tomaschochola/ts-tooling-prettier-config#1.x"
@@ -24,17 +24,17 @@
     "type": "github",
     "url": "https://github.com/sponsors/tomaschochola"
   },
-  "homepage": "https://github.com/tomaschochola/php-psr-18-http-client",
+  "homepage": "https://github.com/tomaschochola/php-psr-18-http-client-curl",
   "keywords": [
     "tomaschochola",
     "TomasChochola",
     "Tomas Chochola",
     "Tomáš Chochola",
-    "php-psr-18-http-client"
+    "php-psr-18-http-client-curl"
   ],
   "license": "CC-BY-ND-4.0",
-  "name": "@tomaschochola/php-psr-18-http-client",
-  "repository": "github:tomaschochola/php-psr-18-http-client",
+  "name": "@tomaschochola/php-psr-18-http-client-curl",
+  "repository": "github:tomaschochola/php-psr-18-http-client-curl",
   "sideEffects": false,
   "type": "module"
 }

@@ -69,9 +69,9 @@ readonly class CurlClient implements ClientInterface
     {
         $headers = [];
 
-        foreach ($request->getHeaders() as $k => $v) {
-            foreach ($v as $vv) {
-                $headers[] = $k . ': ' . $vv;
+        foreach ($request->getHeaders() as $key => $values) {
+            foreach ($values as $value) {
+                $headers[] = $key . ': ' . $value;
             }
         }
 
@@ -121,11 +121,11 @@ readonly class CurlClient implements ClientInterface
                 }
 
                 $key = null;
-                $val = null;
-                $scanned = sscanf($data, " %[^:] : %[^\r\n]", $key, $val);
+                $value = null;
+                $scanned = sscanf($data, " %[^:] : %[^\r\n]", $key, $value);
 
-                if ($scanned === 2 && is_string($key) && is_string($val)) {
-                    $heads[$key][] = $val;
+                if ($scanned === 2 && is_string($key) && is_string($value)) {
+                    $heads[$key][] = $value;
                 }
 
                 return mb_strlen($data, '8bit');
@@ -150,9 +150,9 @@ readonly class CurlClient implements ClientInterface
 
         $response = $response->withStatus($status);
 
-        foreach ($heads as $k => $v) {
-            foreach ($v as $vv) {
-                $response = $response->withAddedHeader($k, $vv);
+        foreach ($heads as $key => $values) {
+            foreach ($values as $value) {
+                $response = $response->withAddedHeader($key, $value);
             }
         }
 
