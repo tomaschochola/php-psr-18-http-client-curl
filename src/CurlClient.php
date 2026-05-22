@@ -56,15 +56,15 @@ use const CURL_HTTP_VERSION_NONE;
  */
 readonly class CurlClient implements ClientInterface
 {
-    private readonly ResponseFactoryInterface $responseFactory;
+    private ResponseFactoryInterface $responseFactory;
 
     public function __construct(ResponseFactoryInterface $responseFactory)
     {
         $this->responseFactory = $responseFactory;
     }
 
-    #[NoDiscard]
-    #[Override]
+    #[NoDiscard()]
+    #[Override()]
     public function sendRequest(RequestInterface $request): ResponseInterface
     {
         $headers = [];
