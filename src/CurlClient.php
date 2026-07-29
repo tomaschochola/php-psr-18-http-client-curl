@@ -22,6 +22,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 
+use function assert;
 use function curl_errno;
 use function curl_error;
 use function curl_exec;
@@ -91,12 +92,18 @@ readonly class CurlClient implements ClientInterface
         }
 
         $method = $request->getMethod();
+        $url = (string) $request->getUri();
+        $requestTarget = $request->getRequestTarget();
+
+        assert($method !== '');
+        assert($url !== '');
+        assert($requestTarget !== '');
 
         $ok = curl_setopt_array($curl, [
             CURLOPT_CUSTOMREQUEST => $method,
             CURLOPT_DEFAULT_PROTOCOL => 'https',
-            CURLOPT_URL => (string) $request->getUri(),
-            CURLOPT_REQUEST_TARGET => $request->getRequestTarget(),
+            CURLOPT_URL => $url,
+            CURLOPT_REQUEST_TARGET => $requestTarget,
             CURLOPT_HTTP_VERSION => match ($request->getProtocolVersion()) {
                 '1', '1.0' => CURL_HTTP_VERSION_1_0,
                 '1.1' => CURL_HTTP_VERSION_1_1,
