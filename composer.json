@@ -91,7 +91,7 @@
     "psr/http-client": "^1.0",
     "psr/http-factory": "^1.1",
     "psr/http-message": "^2.0",
-    "tomaschochola/php-psr-18-http-client": "^1.0@dev"
+    "tomaschochola/php-psr-18-http-client": "^2.0@dev"
   },
   "require-dev": {
     "ext-intl": "*",
@@ -100,10 +100,10 @@
     "ext-zip": "*",
     "phpunit/phpunit": "^13.0",
     "roave/security-advisories": "dev-latest",
-    "tomaschochola/php-psr-17-http-factory": "^1.0@dev",
-    "tomaschochola/php-psr-7-http-message": "^1.0@dev",
-    "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
-    "tomaschochola/tooling-phpstan": "^1.0@dev"
+    "tomaschochola/php-psr-17-http-factory": "^2.0@dev",
+    "tomaschochola/php-psr-7-http-message": "^2.0@dev",
+    "tomaschochola/tooling-php-cs-fixer": "^2.0@dev",
+    "tomaschochola/tooling-phpstan": "^2.0@dev"
   },
   "support": {
     "email": "tomaschochola@tomaschochola.cz",
