@@ -15,10 +15,10 @@
       "url": "https://github.com/tomaschochola"
     }
   ],
-  "description": "@tomaschochola/php-psr-18-http-client-curl",
+  "description": "cURL-backed PSR-18 HTTP client implementation.",
   "devDependencies": {
-    "@tomaschochola/tooling-eslint": "github:tomaschochola/tooling-eslint#1.x",
-    "@tomaschochola/tooling-prettier": "github:tomaschochola/tooling-prettier#1.x",
+    "@tomaschochola/tooling-eslint": "github:tomaschochola/tooling-eslint#2.x",
+    "@tomaschochola/tooling-prettier": "github:tomaschochola/tooling-prettier#2.x",
     "@tomaschochola/tooling-trimmer": "github:tomaschochola/tooling-trimmer#2.x"
   },
   "funding": {
@@ -28,16 +28,18 @@
   "homepage": "https://github.com/tomaschochola/php-psr-18-http-client-curl",
   "keywords": [
     "tomaschochola",
-    "TomasChochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "php-psr-18-http-client-curl"
+    "curl",
+    "http",
+    "http-client",
+    "psr-18"
   ],
   "license": "CC-BY-ND-4.0",
   "name": "@tomaschochola/php-psr-18-http-client-curl",
   "private": true,
-  "repository": "github:tomaschochola/php-psr-18-http-client-curl",
-  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomaschochola/php-psr-18-http-client-curl.git"
+  },
   "type": "module",
   "version": "0.0.0"
 }

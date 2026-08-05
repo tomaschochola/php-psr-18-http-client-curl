@@ -86,6 +86,8 @@ readonly class CurlClient implements ClientInterface
         $output = $response->getBody();
         $input = $request->getBody();
         $heads = [];
+        $protocolVersion = '';
+        $reasonPhrase = '';
 
         if ($input->isSeekable()) {
             $input->rewind();
@@ -115,14 +117,18 @@ readonly class CurlClient implements ClientInterface
             CURLOPT_READFUNCTION => static fn(mixed $ch, mixed $fd, int $length): string => $input->read($length),
             CURLOPT_HTTPHEADER => $headers,
             CURLOPT_WRITEFUNCTION => static fn(mixed $ch, string $data): int => $output->write($data),
-            CURLOPT_HEADERFUNCTION => static function (mixed $ch, string $data) use (&$heads): int {
+            CURLOPT_HEADERFUNCTION => static function (mixed $ch, string $data) use (&$heads, &$protocolVersion, &$reasonPhrase): int {
                 $version = null;
                 $status = null;
                 $reason = null;
-                $scanned = sscanf($data, " HTTP/ %f %d %[^\r\n]", $version, $status, $reason);
+                $scanned = sscanf($data, " HTTP/ %s %d %[^\r\n]", $version, $status, $reason);
 
                 if ($scanned === 2 || $scanned === 3) {
+                    assert(is_string($version));
+
                     $heads = [];
+                    $protocolVersion = $version;
+                    $reasonPhrase = is_string($reason) ? $reason : '';
 
                     return mb_strlen($data, '8bit');
                 }
@@ -155,7 +161,7 @@ readonly class CurlClient implements ClientInterface
             throw new NetworkException($request, curl_error($curl), curl_errno($curl));
         }
 
-        $response = $response->withStatus($status);
+        $response = $response->withStatus($status, $reasonPhrase)->withProtocolVersion($protocolVersion);
 
         foreach ($heads as $key => $values) {
             foreach ($values as $value) {

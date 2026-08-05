@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69309952ff90d1cd258e8d59a2ac6c63",
+    "content-hash": "4a86703e1ef32fa410eb16b90af352ce",
     "packages": [
         {
             "name": "psr/http-client",
@@ -6726,6 +6726,157 @@
             "time": "2025-12-08T11:19:18+00:00"
         },
         {
+            "name": "tomaschochola/php-psr-17-http-factory",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomaschochola/php-psr-17-http-factory.git",
+                "reference": "1ee2801a66533b50f1c6951e606bc2d24c0439aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/1ee2801a66533b50f1c6951e606bc2d24c0439aa",
+                "reference": "1ee2801a66533b50f1c6951e606bc2d24c0439aa",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.5.0",
+                "psr/http-factory": "^1.1",
+                "psr/http-message": "^2.0",
+                "tomaschochola/php-psr-7-http-message": "^1.0@dev"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "ext-pcntl": "*",
+                "ext-xdebug": "*",
+                "ext-zip": "*",
+                "phpunit/phpunit": "^13.0",
+                "roave/security-advisories": "dev-latest",
+                "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
+                "tomaschochola/tooling-phpstan": "^1.0@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TomasChochola\\Psr\\Http\\Factory\\": "./src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "./tests"
+                }
+            },
+            "license": [
+                "CC-BY-ND-4.0"
+            ],
+            "authors": [
+                {
+                    "email": "tomaschochola@tomaschochola.cz",
+                    "homepage": "https://github.com/tomaschochola",
+                    "name": "Tomáš Chochola",
+                    "role": "Author"
+                }
+            ],
+            "description": "tomaschochola/php-psr-17-http-factory",
+            "homepage": "https://github.com/tomaschochola/php-psr-17-http-factory",
+            "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
+                "php-psr-17-http-factory",
+                "tomaschochola"
+            ],
+            "support": {
+                "docs": "https://github.com/tomaschochola/php-psr-17-http-factory",
+                "email": "tomaschochola@tomaschochola.cz",
+                "issues": "https://github.com/tomaschochola/php-psr-17-http-factory/issues",
+                "source": "https://github.com/tomaschochola/php-psr-17-http-factory.git"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/tomaschochola"
+                }
+            ],
+            "time": "2026-07-29T10:41:43+00:00"
+        },
+        {
+            "name": "tomaschochola/php-psr-7-http-message",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomaschochola/php-psr-7-http-message.git",
+                "reference": "918103f03b5cd784f1bdb43ba6bc811f37eb8f86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-7-http-message/zipball/918103f03b5cd784f1bdb43ba6bc811f37eb8f86",
+                "reference": "918103f03b5cd784f1bdb43ba6bc811f37eb8f86",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^8.5.0",
+                "psr/http-message": "^2.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "ext-pcntl": "*",
+                "ext-xdebug": "*",
+                "ext-zip": "*",
+                "phpunit/phpunit": "^13.0",
+                "roave/security-advisories": "dev-latest",
+                "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
+                "tomaschochola/tooling-phpstan": "^1.0@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TomasChochola\\Psr\\Http\\Message\\": "./src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "./tests"
+                }
+            },
+            "license": [
+                "CC-BY-ND-4.0"
+            ],
+            "authors": [
+                {
+                    "email": "tomaschochola@tomaschochola.cz",
+                    "homepage": "https://github.com/tomaschochola",
+                    "name": "Tomáš Chochola",
+                    "role": "Author"
+                }
+            ],
+            "description": "tomaschochola/php-psr-7-http-message",
+            "homepage": "https://github.com/tomaschochola/php-psr-7-http-message",
+            "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
+                "php-psr-7-http-message",
+                "tomaschochola"
+            ],
+            "support": {
+                "docs": "https://github.com/tomaschochola/php-psr-7-http-message",
+                "email": "tomaschochola@tomaschochola.cz",
+                "issues": "https://github.com/tomaschochola/php-psr-7-http-message/issues",
+                "source": "https://github.com/tomaschochola/php-psr-7-http-message.git"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/tomaschochola"
+                }
+            ],
+            "time": "2026-07-29T10:41:43+00:00"
+        },
+        {
             "name": "tomaschochola/tooling-php-cs-fixer",
             "version": "1.x-dev",
             "source": {
@@ -6860,10 +7011,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "roave/security-advisories": 20,
+        "tomaschochola/php-psr-17-http-factory": 20,
         "tomaschochola/php-psr-18-http-client": 20,
+        "tomaschochola/php-psr-7-http-message": 20,
         "tomaschochola/tooling-php-cs-fixer": 20,
         "tomaschochola/tooling-phpstan": 20
     },

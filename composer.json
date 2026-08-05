@@ -4,29 +4,39 @@
       "email": "tomaschochola@tomaschochola.cz",
       "homepage": "https://github.com/tomaschochola",
       "name": "Tomáš Chochola",
-      "role": "Author"
+      "role": "Enterprise Architect"
     }
   ],
   "autoload": {
     "psr-4": {
-      "TomasChochola\\Psr\\Http\\Client\\": "./src"
+      "TomasChochola\\Psr\\Http\\Client\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "./tests"
+      "Tests\\": "tests/"
     }
   },
   "config": {
     "allow-plugins": false,
-    "audit": {
-      "abandoned": "fail"
-    },
     "platform-check": true,
-    "process-timeout": 0,
+    "policy": {
+      "abandoned": {
+        "audit": "fail",
+        "block": true
+      },
+      "advisories": {
+        "audit": "fail",
+        "block": true
+      },
+      "malware": {
+        "audit": "fail",
+        "block": true
+      }
+    },
     "sort-packages": true
   },
-  "description": "tomaschochola/php-psr-18-http-client-curl",
+  "description": "cURL-backed PSR-18 HTTP client implementation.",
   "funding": [
     {
       "type": "github",
@@ -36,30 +46,42 @@
   "homepage": "https://github.com/tomaschochola/php-psr-18-http-client-curl",
   "keywords": [
     "tomaschochola",
-    "TomasChochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "php-psr-18-http-client-curl"
+    "curl",
+    "http",
+    "http-client",
+    "psr-18"
   ],
   "license": "CC-BY-ND-4.0",
-  "minimum-stability": "dev",
   "name": "tomaschochola/php-psr-18-http-client-curl",
   "prefer-stable": true,
+  "provide": {
+    "psr/http-client-implementation": "1.0"
+  },
   "repositories": [
     {
       "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/tooling-phpstan.git"
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/php-psr-7-http-message.git"
     },
     {
       "no-api": true,
-      "type": "git",
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/php-psr-17-http-factory.git"
+    },
+    {
+      "no-api": true,
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/php-psr-18-http-client.git"
+    },
+    {
+      "no-api": true,
+      "type": "vcs",
       "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git"
     },
     {
       "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/php-psr-18-http-client.git"
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/tooling-phpstan.git"
     }
   ],
   "require": {
@@ -78,11 +100,12 @@
     "ext-zip": "*",
     "phpunit/phpunit": "^13.0",
     "roave/security-advisories": "dev-latest",
+    "tomaschochola/php-psr-17-http-factory": "^1.0@dev",
+    "tomaschochola/php-psr-7-http-message": "^1.0@dev",
     "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
     "tomaschochola/tooling-phpstan": "^1.0@dev"
   },
   "support": {
-    "docs": "https://github.com/tomaschochola/php-psr-18-http-client-curl",
     "email": "tomaschochola@tomaschochola.cz",
     "issues": "https://github.com/tomaschochola/php-psr-18-http-client-curl/issues",
     "source": "https://github.com/tomaschochola/php-psr-18-http-client-curl.git"
