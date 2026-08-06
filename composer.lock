@@ -172,12 +172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-18-http-client.git",
-                "reference": "a79031552aa99fad02d4ed4040f5ebcad0d61e45"
+                "reference": "3ae8418027ece7cc767be9237b6c91fc08dc9775"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-18-http-client/zipball/a79031552aa99fad02d4ed4040f5ebcad0d61e45",
-                "reference": "a79031552aa99fad02d4ed4040f5ebcad0d61e45",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-18-http-client/zipball/3ae8418027ece7cc767be9237b6c91fc08dc9775",
+                "reference": "3ae8418027ece7cc767be9237b6c91fc08dc9775",
                 "shasum": ""
             },
             "require": {
@@ -214,12 +214,15 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Enterprise Architect"
+                    "role": "Author"
                 }
             ],
             "description": "PSR-18 network exception implementation for HTTP clients.",
             "homepage": "https://github.com/tomaschochola/php-psr-18-http-client",
             "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
                 "http",
                 "http-client",
                 "psr-18",
@@ -236,7 +239,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T15:07:07+00:00"
+            "time": "2026-08-05T21:42:11+00:00"
         }
     ],
     "packages-dev": [
@@ -6689,12 +6692,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-17-http-factory.git",
-                "reference": "4740ab169c9c95f6ac7d930f7c8d011de820cd72"
+                "reference": "1e02f7c8ed6483baff6f3545c97869127f434cf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/4740ab169c9c95f6ac7d930f7c8d011de820cd72",
-                "reference": "4740ab169c9c95f6ac7d930f7c8d011de820cd72",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/1e02f7c8ed6483baff6f3545c97869127f434cf5",
+                "reference": "1e02f7c8ed6483baff6f3545c97869127f434cf5",
                 "shasum": ""
             },
             "require": {
@@ -6735,12 +6738,15 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Enterprise Architect"
+                    "role": "Author"
                 }
             ],
             "description": "PSR-17 HTTP factories including CGI server request creation.",
             "homepage": "https://github.com/tomaschochola/php-psr-17-http-factory",
             "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
                 "http",
                 "http-factory",
                 "psr-17",
@@ -6758,7 +6764,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T15:07:07+00:00"
+            "time": "2026-08-05T21:42:11+00:00"
         },
         {
             "name": "tomaschochola/php-psr-7-http-message",
@@ -6766,12 +6772,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-7-http-message.git",
-                "reference": "790290acdb2988e2b8a88808fb18265c23cde701"
+                "reference": "b8615ae5c562028bde7cb99ad2583a69337a847f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-7-http-message/zipball/790290acdb2988e2b8a88808fb18265c23cde701",
-                "reference": "790290acdb2988e2b8a88808fb18265c23cde701",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-7-http-message/zipball/b8615ae5c562028bde7cb99ad2583a69337a847f",
+                "reference": "b8615ae5c562028bde7cb99ad2583a69337a847f",
                 "shasum": ""
             },
             "require": {
@@ -6811,12 +6817,15 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Enterprise Architect"
+                    "role": "Author"
                 }
             ],
             "description": "PSR-7 HTTP message, request, response, stream, URI, and upload implementations.",
             "homepage": "https://github.com/tomaschochola/php-psr-7-http-message",
             "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
                 "http",
                 "http-message",
                 "psr-7",
@@ -6833,7 +6842,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T15:07:07+00:00"
+            "time": "2026-08-05T21:42:11+00:00"
         },
         {
             "name": "tomaschochola/tooling-php-cs-fixer",
@@ -6841,12 +6850,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "b542571e344e2b34d7ad8550ab8001911527fe8b"
+                "reference": "b533e98ffcf3784b2d48700270a105fcd072f3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/b542571e344e2b34d7ad8550ab8001911527fe8b",
-                "reference": "b542571e344e2b34d7ad8550ab8001911527fe8b",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/b533e98ffcf3784b2d48700270a105fcd072f3ef",
+                "reference": "b533e98ffcf3784b2d48700270a105fcd072f3ef",
                 "shasum": ""
             },
             "require": {
@@ -6881,12 +6890,15 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Enterprise Architect"
+                    "role": "Author"
                 }
             ],
             "description": "Shared PHP CS Fixer configuration and custom coding-standard fixers for PHP 8.5.",
             "homepage": "https://github.com/tomaschochola/tooling-php-cs-fixer",
             "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
                 "code-style",
                 "coding-standard",
                 "php-cs-fixer",
@@ -6904,7 +6916,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T15:07:08+00:00"
+            "time": "2026-08-05T21:42:12+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
@@ -6912,12 +6924,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "6ce2ac7333fb476b900bd3f74106a4a2c2658a48"
+                "reference": "2d994046aeda75cc1c0b5d7c0fd01d565c0be1c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/6ce2ac7333fb476b900bd3f74106a4a2c2658a48",
-                "reference": "6ce2ac7333fb476b900bd3f74106a4a2c2658a48",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/2d994046aeda75cc1c0b5d7c0fd01d565c0be1c5",
+                "reference": "2d994046aeda75cc1c0b5d7c0fd01d565c0be1c5",
                 "shasum": ""
             },
             "require": {
@@ -6950,12 +6962,15 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Enterprise Architect"
+                    "role": "Author"
                 }
             ],
             "description": "Shared strict PHPStan 2 configuration for PHP 8.5 libraries and applications.",
             "homepage": "https://github.com/tomaschochola/tooling-phpstan",
             "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
                 "phpstan",
                 "static-analysis",
                 "tomaschochola",
@@ -6972,7 +6987,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T15:07:08+00:00"
+            "time": "2026-08-05T21:42:12+00:00"
         }
     ],
     "aliases": [],
