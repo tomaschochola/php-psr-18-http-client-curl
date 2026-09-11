@@ -172,12 +172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-18-http-client.git",
-                "reference": "97ccbc4b080f66818b33a043e904dedf01ab4569"
+                "reference": "816d2d4fae7f383ee49e0a182644d170109d2b82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-18-http-client/zipball/97ccbc4b080f66818b33a043e904dedf01ab4569",
-                "reference": "97ccbc4b080f66818b33a043e904dedf01ab4569",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-18-http-client/zipball/816d2d4fae7f383ee49e0a182644d170109d2b82",
+                "reference": "816d2d4fae7f383ee49e0a182644d170109d2b82",
                 "shasum": ""
             },
             "require": {
@@ -240,7 +240,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-09-09T14:03:14+00:00"
+            "time": "2026-09-11T14:53:00+00:00"
         }
     ],
     "packages-dev": [
@@ -1685,16 +1685,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "14.3.2",
+            "version": "14.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "93d62632fb675b76c9b941fdcfcfa10ffb9dea75"
+                "reference": "f8640c238e930b914d0098a1edbad6652e61a64a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/93d62632fb675b76c9b941fdcfcfa10ffb9dea75",
-                "reference": "93d62632fb675b76c9b941fdcfcfa10ffb9dea75",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/f8640c238e930b914d0098a1edbad6652e61a64a",
+                "reference": "f8640c238e930b914d0098a1edbad6652e61a64a",
                 "shasum": ""
             },
             "require": {
@@ -1713,7 +1713,7 @@
                 "theseer/tokenizer": "^2.0.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.3.2"
+                "phpunit/phpunit": "^13.3.3"
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
@@ -1751,7 +1751,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.3.2"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.3.3"
             },
             "funding": [
                 {
@@ -1771,7 +1771,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-04T03:46:43+00:00"
+            "time": "2026-09-10T13:08:32+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -6711,12 +6711,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-17-http-factory.git",
-                "reference": "f52b4a9c84ba0307d8a5c9ceb4d3e7fd5463e2ad"
+                "reference": "ecdff2a7791c03cf202f7d7773dfa639351c935f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/f52b4a9c84ba0307d8a5c9ceb4d3e7fd5463e2ad",
-                "reference": "f52b4a9c84ba0307d8a5c9ceb4d3e7fd5463e2ad",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/ecdff2a7791c03cf202f7d7773dfa639351c935f",
+                "reference": "ecdff2a7791c03cf202f7d7773dfa639351c935f",
                 "shasum": ""
             },
             "require": {
@@ -6784,7 +6784,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-09-09T14:01:52+00:00"
+            "time": "2026-09-11T14:52:07+00:00"
         },
         {
             "name": "tomaschochola/php-psr-7-http-message",
