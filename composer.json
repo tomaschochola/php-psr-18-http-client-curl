@@ -49,10 +49,7 @@
         "TomasChochola",
         "Tomas Chochola",
         "Tomáš Chochola",
-        "curl",
-        "http",
-        "http-client",
-        "psr-18"
+        "php-psr-18-http-client-curl"
     ],
     "license": "CC-BY-ND-4.0",
     "name": "tomaschochola/php-psr-18-http-client-curl",
