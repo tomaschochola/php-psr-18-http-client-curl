@@ -175,12 +175,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-18-http-client.git",
-                "reference": "1f685d6bf30be546a285810a7a00f4319acfc7d0"
+                "reference": "838d80ed6076598383693b9867d40e2e97e2ff89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-18-http-client/zipball/1f685d6bf30be546a285810a7a00f4319acfc7d0",
-                "reference": "1f685d6bf30be546a285810a7a00f4319acfc7d0",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-18-http-client/zipball/838d80ed6076598383693b9867d40e2e97e2ff89",
+                "reference": "838d80ed6076598383693b9867d40e2e97e2ff89",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T16:14:45+00:00"
+            "time": "2026-10-31T16:59:59+00:00"
         }
     ],
     "packages-dev": [
@@ -6761,12 +6761,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-17-http-factory.git",
-                "reference": "ea721d0366b16bf710795d31e9c9df12daf62bb6"
+                "reference": "7f4daa379b36f8e65ffba670beffa670df7faede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/ea721d0366b16bf710795d31e9c9df12daf62bb6",
-                "reference": "ea721d0366b16bf710795d31e9c9df12daf62bb6",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-17-http-factory/zipball/7f4daa379b36f8e65ffba670beffa670df7faede",
+                "reference": "7f4daa379b36f8e65ffba670beffa670df7faede",
                 "shasum": ""
             },
             "require": {
@@ -6831,7 +6831,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T16:22:01+00:00"
+            "time": "2026-10-31T17:07:55+00:00"
         },
         {
             "name": "tomaschochola/php-psr-7-http-message",
@@ -6839,12 +6839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-psr-7-http-message.git",
-                "reference": "41c1b5c91115f1e63b085eab6126287adcb7cf9e"
+                "reference": "8426b88fdba4b89c768c6f2cccf78b26e4e38f19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-psr-7-http-message/zipball/41c1b5c91115f1e63b085eab6126287adcb7cf9e",
-                "reference": "41c1b5c91115f1e63b085eab6126287adcb7cf9e",
+                "url": "https://api.github.com/repos/tomaschochola/php-psr-7-http-message/zipball/8426b88fdba4b89c768c6f2cccf78b26e4e38f19",
+                "reference": "8426b88fdba4b89c768c6f2cccf78b26e4e38f19",
                 "shasum": ""
             },
             "require": {
@@ -6908,7 +6908,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T16:16:17+00:00"
+            "time": "2026-10-31T17:02:31+00:00"
         },
         {
             "name": "tomaschochola/tooling-php-cs-fixer",
@@ -6916,12 +6916,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "cdd3d9ccf1fa874bd63c250dfbf5739abd4d90dd"
+                "reference": "75c349ccd020848be284cb7778afcd7b8b1b6b4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/cdd3d9ccf1fa874bd63c250dfbf5739abd4d90dd",
-                "reference": "cdd3d9ccf1fa874bd63c250dfbf5739abd4d90dd",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/75c349ccd020848be284cb7778afcd7b8b1b6b4a",
+                "reference": "75c349ccd020848be284cb7778afcd7b8b1b6b4a",
                 "shasum": ""
             },
             "require": {
@@ -6980,7 +6980,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T16:09:58+00:00"
+            "time": "2026-10-31T16:52:26+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
@@ -6988,12 +6988,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "488fa47d1d6a901ae057331b39fe2ba741097c36"
+                "reference": "054bea98a84afa234b28937660cc76d841b02192"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/488fa47d1d6a901ae057331b39fe2ba741097c36",
-                "reference": "488fa47d1d6a901ae057331b39fe2ba741097c36",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/054bea98a84afa234b28937660cc76d841b02192",
+                "reference": "054bea98a84afa234b28937660cc76d841b02192",
                 "shasum": ""
             },
             "require": {
@@ -7050,7 +7050,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T16:07:23+00:00"
+            "time": "2026-10-31T16:48:17+00:00"
         }
     ],
     "aliases": [],
